@@ -26,7 +26,7 @@ ClickLoop() {
         Click 900, 500, "Right"
 
         ; '-' breaks loop
-        if (!GetKeyState("0", "P"))
+        if (!GetKeyState("0", "P")) ; "P" is a parameter for this function to know that if its clicking another key, not the letter "P" being clicked.
             break
     }
 }
