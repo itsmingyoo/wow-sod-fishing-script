@@ -19,6 +19,27 @@ ClickLoop() {
         ; START BY PRESSING THE "Y" KEY
         SendInput "{y}"
 
+        Sleep 500
+
+        ; SNAPSHOT THE BOBBLE LOCATION
+        Send "{PrintScreen}"
+
+        Sleep 500
+
+        ; ALT TAB INTO PAINT
+        ; Click 600, 1061
+        WinActivate "Untitled - Paint"
+
+        ; PASTE CLIPBOARD
+        Send "{Ctrl Down}"
+        Send "{v}"
+
+        Sleep 500
+
+        Send "{Ctrl Up}"
+
+        Sleep 30000
+
         ; invoke the sleep function with the variable we created for 5-15 seconds
         sleepInterval := Random(5000, 15000) ; variable for 5-15 seconds, one cast is 30 seconds
         Sleep sleepInterval
