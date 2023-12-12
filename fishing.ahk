@@ -5,6 +5,7 @@ global on := False ; Declare on as a global variable
 ToggleAutoClick() {
     global on ; Access the global on variable
     on := !on
+
     SoundBeep(1000 + 500 * on)
 
     if (on) {
@@ -19,12 +20,12 @@ ClickLoop() {
         ; START BY PRESSING THE "Y" KEY
         SendInput "{y}"
 
-        Sleep 500
+        Sleep 1000
 
         ; SNAPSHOT THE BOBBLE LOCATION
         Send "{PrintScreen}"
 
-        Sleep 500
+        Sleep 1000
 
         ; ALT TAB INTO PAINT
         ; Click 600, 1061
